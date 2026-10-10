@@ -1,0 +1,19 @@
+node_modules/
+dist/
+dist-ssr/
+
+# Local environment files; keep safe examples shareable.
+.env*
+!.env.example
+!.env.*.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.local
