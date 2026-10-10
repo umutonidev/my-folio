@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 :root {
   font-family: 'DM Sans', sans-serif;
   color: #1e1916;
@@ -65,6 +67,7 @@ h1 span { color: var(--chocolate); }
 .portrait-wrap { position: relative; width: min(100%, 380px); justify-self: center; aspect-ratio: .82; padding: 20px; animation: arrive 700ms 100ms both; }
 .portrait-frame { width: 100%; height: 100%; overflow: hidden; border: 1px solid #826752; border-radius: 48% 48% 4px 4px; background: var(--chocolate-soft); box-shadow: 16px 16px 0 var(--chocolate-soft); }
 .portrait-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.portrait-fallback { width: 100%; height: 100%; display: grid; place-items: center; color: var(--chocolate-dark); background: linear-gradient(145deg, #f3ece6, #d9c6b6); font-family: var(--serif); font-size: 88px; font-weight: 600; }
 .portrait-note { position: absolute; right: 0; bottom: 2px; color: var(--muted); font-size: 12px; text-transform: uppercase; }
 .scroll-cue { position: absolute; bottom: 34px; left: 0; display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: 12px; text-decoration: none; }
 .scroll-cue span { color: var(--chocolate); font-size: 18px; }
@@ -93,7 +96,7 @@ h1 span { color: var(--chocolate); }
 .tag-list li { padding: 5px 9px; border: 1px solid #e4ddd6; color: #514943; background: #fbfaf8; font-size: 12px; line-height: 1.35; }
 .project-card-featured .tag-list li { border-color: rgb(255 255 255 / 30%); color: #f7f1ec; background: rgb(255 255 255 / 7%); }
 
-.experience-section { padding-block: 84px 92px; color: var(--white); background: var(--chocolate-dark); }
+.experience-section { padding-block: 84px 92px; color: var(--white); background: var(--chocolate); }
 .experience-section .section-heading .eyebrow { color: #dbc8b8; }
 .experience-section .section-heading h2 { color: var(--white); }
 .experience-list { border-top: 1px solid rgb(255 255 255 / 24%); }
