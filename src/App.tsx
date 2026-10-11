@@ -11,7 +11,7 @@ const navItems: NavItem[] = [
   { id: 'about', label: 'About Me' },
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
-  { id: 'skills', label: 'Skills & Certifications' },
+  { id: 'skills', label: 'Skills and Certifications' },
   { id: 'contact', label: 'Contact' },
 ]
 
@@ -37,7 +37,7 @@ const projects: Project[] = [
   {
     number: '03',
     title: 'IoT-Based Counterfeit Certificate Detection System',
-    type: 'IoT & image classification',
+    type: 'IoT and image classification',
     featured: false,
     description:
       'A prototype that uses image classification and a microcontroller to distinguish valid and invalid certificates, with LED indicators for the result.',
@@ -91,11 +91,11 @@ const experiences: Experience[] = [
 
 const skillGroups: SkillGroupType[] = [
   {
-    title: 'Embedded Systems & IoT',
+    title: 'Embedded Systems and IoT',
     skills: ['Arduino Uno', 'ESP32', 'Embedded Systems', 'Internet of Things (IoT)', 'Edge Impulse', 'Proteus'],
   },
   {
-    title: 'Electrical & Networking',
+    title: 'Electrical and Networking',
     skills: ['Access Control', 'IP CCTV', 'Power over Ethernet (PoE)', 'Networking', 'Electrical Engineering Drawings'],
   },
   {
@@ -103,7 +103,7 @@ const skillGroups: SkillGroupType[] = [
     skills: ['HTML', 'CSS', 'JavaScript', 'Python', 'C', 'C++', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'Postman'],
   },
   {
-    title: 'Design & Development Tools',
+    title: 'Design and Development Tools',
     skills: ['AutoCAD — currently learning', 'Visual Studio Code (VS Code)', 'Figma'],
   },
   {
@@ -155,7 +155,7 @@ function App() {
       </header>
 
       <main id="main">
-        <section className="hero section-wrap scroll-mt-28" id="about" aria-labelledby="hero-title">
+        <section className="hero section-wrap scroll-mt-0" id="about" aria-labelledby="hero-title">
           <div className="hero-copy">
             <h1 id="hero-title">Hello, I’m<br /><span>Fridaus.</span></h1>
             <p className="hero-intro">
@@ -185,7 +185,7 @@ function App() {
           </div>
         </section>
 
-        <section className="projects-section section-wrap scroll-mt-28" id="projects" aria-labelledby="projects-title">
+        <section className="projects-section section-wrap scroll-mt-0" id="projects" aria-labelledby="projects-title">
           <SectionHeading id="projects-title" eyebrow="Selected work" title="Projects" />
           <div className="project-grid">
             {projects.map((project) => (
@@ -194,7 +194,7 @@ function App() {
           </div>
         </section>
 
-        <section className="experience-section scroll-mt-28" id="experience" aria-labelledby="experience-title">
+        <section className="experience-section scroll-mt-0" id="experience" aria-labelledby="experience-title">
           <div className="section-wrap">
             <SectionHeading id="experience-title" eyebrow="Learning by doing" title="Experience" />
             <div className="experience-list">
@@ -205,22 +205,22 @@ function App() {
           </div>
         </section>
 
-        <section className="skills-section section-wrap scroll-mt-28" id="skills" aria-labelledby="skills-title">
-          <SectionHeading id="skills-title" eyebrow="What I work with" title="Skills & Certifications" />
+        <section className="skills-section section-wrap scroll-mt-0" id="skills" aria-labelledby="skills-title">
+          <SectionHeading id="skills-title" eyebrow="What I work with" title="Skills and Certifications" />
           <div className="skills-grid">
             {skillGroups.map((group, index) => (
               <SkillGroup key={group.title} group={group} index={index} />
             ))}
           </div>
           <div className="training-block">
-            <h3>Training &amp; Certifications</h3>
+            <h3>Training and Certification</h3>
             <ul className="training-list">
               {training.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
         </section>
 
-        <section className="contact-section scroll-mt-28" id="contact" aria-labelledby="contact-title">
+        <section className="contact-section scroll-mt-0" id="contact" aria-labelledby="contact-title">
           <div className="section-wrap contact-inner">
             <div>
               <p className="eyebrow">Start a conversation</p>

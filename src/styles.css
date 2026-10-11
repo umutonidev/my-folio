@@ -19,7 +19,7 @@
   --content: 1120px;
   font-optical-sizing: auto;
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 0;
 }
 
 * { box-sizing: border-box; }
@@ -48,7 +48,7 @@ a:focus-visible { outline: 3px solid #9b6b4d; outline-offset: 4px; border-radius
 .site-header nav a { min-height: 44px; display: inline-flex; align-items: center; color: var(--muted); font-size: 13px; font-weight: 600; text-decoration: none; transition: color 160ms ease; }
 .site-header nav a:hover, .site-header nav a:focus-visible { color: var(--chocolate); }
 
-.hero { position: relative; min-height: 610px; padding-block: 88px 116px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); align-items: center; gap: 72px; }
+.hero { position: relative; min-height: 500px; padding-block: 16px 56px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); align-items: center; gap: 48px; }
 .hero-copy { max-width: 620px; animation: arrive 650ms both; }
 .eyebrow { margin: 0 0 16px; color: var(--chocolate); font-size: 12px; font-weight: 700; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
@@ -72,8 +72,8 @@ h1 span { color: var(--chocolate); }
 .scroll-cue { position: absolute; bottom: 34px; left: 0; display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: 12px; text-decoration: none; }
 .scroll-cue span { color: var(--chocolate); font-size: 18px; }
 
-.projects-section { padding-block: 88px 108px; }
-.section-heading { margin-bottom: 36px; }
+.projects-section { padding-block: 68px 84px; }
+.section-heading { margin-bottom: 28px; }
 .section-heading .eyebrow { margin-bottom: 7px; }
 .section-heading h2, .contact-inner h2 { margin-bottom: 0; color: var(--chocolate-dark); font-size: clamp(36px, 4vw, 48px); font-weight: 600; line-height: 1.08; }
 .projects-section .section-heading h2, .project-card h3 { font-family: var(--sans); }
@@ -81,7 +81,11 @@ h1 span { color: var(--chocolate); }
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .project-card { position: relative; min-height: 290px; padding: 26px; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 4px; background: var(--white); box-shadow: 0 5px 18px rgb(56 39 31 / 5%); transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
 .project-card::before { position: absolute; top: 0; right: 0; left: 0; height: 4px; background: var(--chocolate); content: ''; }
-.project-card:hover { transform: translateY(-4px); border-color: #a8907c; box-shadow: 0 12px 24px rgb(56 39 31 / 10%); }
+.project-card:hover, .project-card:focus-within { transform: translateY(-4px); border-color: var(--chocolate); box-shadow: 0 12px 24px rgb(56 39 31 / 12%); background: var(--chocolate); color: var(--white); }
+.project-card:hover .project-card h3, .project-card:focus-within .project-card h3 { color: var(--white); }
+.project-card:hover .project-description, .project-card:focus-within .project-description { color: #f1e8e0; }
+.project-card:hover .project-type, .project-card:focus-within .project-type { color: #e1cdbd; }
+.project-card:hover .tag-list li, .project-card:focus-within .tag-list li { border-color: rgb(255 255 255 / 30%); color: #f7f1ec; background: rgb(255 255 255 / 7%); }
 .project-card-featured { border-color: var(--chocolate-dark); color: var(--white); background: var(--chocolate-dark); }
 .project-card-featured::before { background: #c4a68f; }
 .project-meta { margin-bottom: 26px; display: flex; align-items: center; gap: 12px; }
@@ -96,7 +100,7 @@ h1 span { color: var(--chocolate); }
 .tag-list li { padding: 5px 9px; border: 1px solid #e4ddd6; color: #514943; background: #fbfaf8; font-size: 12px; line-height: 1.35; }
 .project-card-featured .tag-list li { border-color: rgb(255 255 255 / 30%); color: #f7f1ec; background: rgb(255 255 255 / 7%); }
 
-.experience-section { padding-block: 84px 92px; color: var(--white); background: var(--chocolate); }
+.experience-section { padding-block: 70px 78px; color: var(--white); background: var(--chocolate); }
 .experience-section .section-heading .eyebrow { color: #dbc8b8; }
 .experience-section .section-heading h2 { color: var(--white); }
 .experience-list { border-top: 1px solid rgb(255 255 255 / 24%); }
@@ -107,17 +111,17 @@ h1 span { color: var(--chocolate); }
 .experience-detail ul { margin: 0; padding-left: 19px; display: grid; gap: 8px; color: #f4eee8; font-size: 15px; line-height: 1.65; }
 .experience-detail li::marker { color: #c4a68f; }
 
-.skills-section { padding-block: 96px 100px; }
+.skills-section { padding-block: 72px 80px; }
 .skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .skill-group { padding: 21px 22px 23px; border: 1px solid var(--line); border-top: 3px solid var(--chocolate); border-radius: 3px; background: var(--white); box-shadow: 0 4px 14px rgb(56 39 31 / 4%); }
 .skill-group-wide { grid-column: 1 / -1; }
 .skill-group h3, .training-block h3 { margin-bottom: 16px; color: var(--chocolate-dark); font-family: var(--serif); font-size: 21px; font-weight: 600; }
-.training-block { margin-top: 34px; padding-top: 25px; border-top: 1px solid var(--line); }
+.training-block { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
 .training-list { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; list-style: none; }
 .training-list li { min-height: 56px; padding: 13px 15px; display: flex; align-items: center; border: 1px solid var(--line); border-radius: 3px; color: #453c36; background: var(--white); font-size: 14px; line-height: 1.5; }
 
-.contact-section { padding-top: 70px; color: var(--white); background: var(--chocolate); }
-.contact-inner { padding-bottom: 64px; display: grid; grid-template-columns: 1fr .8fr; align-items: start; gap: 64px; }
+.contact-section { padding-top: 56px; color: var(--white); background: var(--chocolate); }
+.contact-inner { padding-bottom: 52px; display: grid; grid-template-columns: 1fr .8fr; align-items: start; gap: 54px; }
 .contact-inner .eyebrow { color: #eee0d5; }
 .contact-inner h2 { color: var(--white); }
 .contact-copy { max-width: 400px; margin: 16px 0 0; color: #f2e9e1; font-size: 15px; line-height: 1.7; }
